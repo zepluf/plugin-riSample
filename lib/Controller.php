@@ -22,7 +22,7 @@ class AdminController extends \plugins\riSimplex\Controller
      * @return \Symfony\Component\HttpFoundation\Response
      */
     public function someAction(){
-        return $this->render('riSample:sample.php');
+        return $this->render('riSample:frontend/sample.php');
     }
 
     /**
