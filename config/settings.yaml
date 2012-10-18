@@ -1,0 +1,39 @@
+# anything you put here will be accessible via the settings service
+# note that anytime you change something in the settings file you will need to reload via admin
+abc: true
+# Plugin::get('settings')->get('riSample') will return the whole settings array
+# Plugin::get('settings')->get('riSample.abc') will return boolean true
+# note how the plugin's name always come first
+
+def:
+  xyz: something
+  edf:
+    yuh: kef
+# Plugin::get('settings')->get('riSample.def') will return the def array
+# Plugin::get('settings')->get('riSample.def.edf.yuh') will return "kef"
+
+# routing settings are also set in this file
+# we are using symfony2's routing component which you can read more on
+# http://symfony.com/doc/2.0/book/routing.html
+routes:
+  some_normal_route:
+    pattern: /can_be_anything/
+    # it is recommended that you always appended "Action" to the methods in your controller
+    # that are accessible via browser
+    defaults: { _controller: plugins\riSample\lib\Controller::someAction }
+
+  # the route meant to be accessed via admin should always be prepended with "admin_"
+  admin_plugins:
+    pattern:  /manager/
+    # it is recommended that you always appended "Action" to the methods in your controller
+    # that are accessible via browser
+    defaults: { _controller: plugins\riSample\lib\AdminController::someAction }
+
+# you can also add a new link to the backend menu easily by following the same format below
+global:
+  backend:
+    menu:
+      # append the "Sample Link" link into the Extras menu
+      # note how risample must be prepended to the link
+      extras:
+        - {text: Plugins Manager, route: risample_some_normal_route}
