@@ -6,7 +6,7 @@
     <!-- read more about service container on http://symfony.com/doc/current/book/service_container.html -->
     <services>
         <!-- please always, always prepend your plugin name to the service id to avoid conflict -->
-    	<service id="riSample.Something" class="plugins\riSample\lib\Something" scope="prototype">
+    	<service id="riSample.Something" class="plugins\riSample\Something" scope="prototype">
     	</service>
 
     </services>

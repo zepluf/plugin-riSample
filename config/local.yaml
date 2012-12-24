@@ -1,7 +1,0 @@
-# this local file should NEVER be included in a plugin's package
-# the local file should be created by the users, to override the default plugin
-
-def:
-  xyz: somethingelse
-# Plugin::get('settings')->get('riSample.def.xyz') will now return the "somethingelse"
-# settings in the local will be RECURSIVELY merged into the main settings

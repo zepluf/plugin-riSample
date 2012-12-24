@@ -11,17 +11,19 @@
  * file of ZePLUF framework
  */
 
-namespace plugins\riSample\lib;
+namespace plugins\riSample;
 
-class Something
+class Something2 extends Something
 {
     /**
-     * A cool method
+     * much cooler method
      *
      * @return mixed
      */
     public function coolMethod(){
         // ri is the function responsible for translation
-        return ri("I'm cool");
+        return ri("I'm cooler");
     }
 }
+
+// Now Plugin::get('riSample.Something')->coolMethod() will return "I'm cooler"

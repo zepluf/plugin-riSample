@@ -11,11 +11,11 @@
  * file of ZePLUF framework
  */
 
-namespace plugins\riSample\lib;
+namespace plugins\riSample;
 
 use \Symfony\Component\HttpFoundation;
 
-class AdminController extends \plugins\riSimplex\Controller
+class AdminController extends \Zepluf\Bundle\StoreBundle\Controller\Controller
 {
     /**
      * @param Request $request
